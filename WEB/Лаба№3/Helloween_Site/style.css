@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+html,body{
+    min-width: 1200px;
+    min-height: 720px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.backgraund-content{
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background: url('./4183289.jpg');
+    background-size: cover;
+}
+
+.spiderPoint{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+
+    background: rgba(92, 28, 47, 0.7);
+    transition: 1s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.spiderPoint.spider-show{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /*background: rgba(92, 28, 47, 0.7);*/
+    background: url("./Bat_Background.png");
+    background-size: cover;
+    cursor: pointer;
+}
+
+.spider-property::before{
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    box-shadow: 0 0 10px #000;
+}
+
+.spider-1{
+    position: relative;
+
+    top: 0;
+    left: 10%;
+    width: 330px;
+    height: 605px;
+}
+
+.spider-1::after{
+    content: "";
+
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url('./spider_cut.png');
+    background-size: cover;
+}
+
+.spider-1.spider-show::after{
+    animation: spiderShow 6s forwards ease,spiderIdle 3s infinite ease-in-out 5.9s;
+}
+
+.spider-2{
+    position: absolute;
+
+    top: 0%;
+    left: 85%;
+    width: 150px;
+    height: 380px; 
+}
+
+.spider-2::after{
+    content: "";
+
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+
+    background: url('./spider_cut_height_midle.png');
+    background-size: contain;
+}
+
+.spider-2.spider-show::after{
+    animation: spiderShow 6s forwards ease,spiderIdle 3s infinite ease-in-out 5.9s;
+}
+
+.spider-3{
+    position: absolute;
+
+    top: 0%;
+    left: 60%;
+    width: 330px;
+    height: 835px;
+}
+
+.spider-3::after{
+    content: "";
+
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+
+    background: url('./spider_cut_height_midle.png');
+    background-size: contain;
+}
+
+.spider-3.spider-show::after{
+    animation: spiderShow 6s forwards 0.5s ease,spiderIdle 3s infinite ease-in-out 6.4s;
+}
+
+.spider-4{
+    position: absolute;
+
+    top: 0%;
+    left: 45%;
+    width: 148px;
+    height: 520px;
+}
+
+.spider-4::after{
+    content: "";
+
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+
+    background: url('./spider_cut_height-large.png');
+    background-size: contain;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.spider-4.spider-show::after{
+    opacity: 1;
+    animation: spiderShow 6s forwards 0.5s ease,spiderIdle 3s infinite ease-in-out 6.4s;
+}
+
+
+@keyframes spiderShow {
+    0%{
+        top: -100%;
+    }
+
+    70%{
+        top: -5%;
+    }
+
+    80%{
+        top: -15%;
+    }
+
+    90%{
+        top: -10%;
+    }
+
+    100%{
+        top: -15%;
+    }
+}
+
+@keyframes spiderIdle{
+    0%{
+        top: -15%;
+    }
+
+    50% {
+        top: -9%;
+    }
+
+    100%{
+        top: -15%;
+    }
+}
+
+.wrapper{
+    width: 1000px;
+    min-height: 99%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header-site{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.logo{
+    margin: auto 0;
+    font-family: 'Creepster', cursive;
+    cursor: default;
+
+    transition: all 1.5s;
+}
+
+.logo:hover{
+    scale: 1.3;
+}
+
+.heder-site_nav-menu{
+    display: flex;
+    flex-direction: row;
+}
+.btn-menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    /*background: #7b2540;*/
+    margin: 0 14px;
+    cursor: pointer;
+    
+    border-radius: 20px;
+    transition: all .3s ease 0s;  
+}
+
+.btn-menu::before{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 105%;
+    height: 105%;
+    top: 0%;
+    left: -2%;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px #5c1c2f;
+    transition: 0.8s;
+}
+
+.btn-menu:hover::before{
+    scale: 1.2;
+    transition: .8s;
+}
+
+.btn-menu::after{
+    z-index: 1;
+    content: "";
+    position: absolute;
+    background: #5c1c2f;
+    width: 105%;
+    height: 105%;
+    top: 0%;
+    left: -2%;
+    border-radius: 20px;
+    opacity: 0;
+    scale: 0;
+    transition: 2s;
+}
+
+.btn-menu:hover::after{
+    opacity: 0.6;
+    scale: 1;
+    transition: .8s;
+}
+
+.btn-menu_text{
+    position: relative;
+    z-index: 6;
+
+    transition: all .8s;
+}
+
+.text-box{
+    height: 600px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box__title{
+    font-family: 'Creepster', cursive;
+    font-size: 150px;
+    text-shadow: 0 0 10px #000;
+    cursor: default;
+
+    transition: all 1.5s;
+}
+
+.text-box__title:hover{
+    scale: 1.2;
+    text-shadow: 0 0 40px #000;
+}
+
+.checkbox{
+    font-size: 16px;
+    line-height: 20px;
+    padding:0 0 0 70px;
+    position: relative;
+    cursor: pointer;
+
+    color: rgb(255, 255, 255,0.5);
+    transition: 0.3s;
+}
+
+.checkbox::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 20px;
+    background-color: #dfd1d5;
+    border-radius: 20px;
+    box-shadow: 0 0 3px rgb(0, 0, 0,0.3);
+}
+
+.checkbox::after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: -20%;
+    left: 0px;
+
+    background: #dfd1d5;
+    box-shadow: 0 0 3px rgb(0, 0, 0,0.3);
+}
+
+.checkbox>input{
+    display: none;
+}
+
+.checkbox.active{
+    color: rgb(255, 255, 255);
+
+    transition: 0.3s;
+}
+
+.checkbox.active::after{
+    left: 20px;
+    background: rgb(56, 218, 115);
+}
+

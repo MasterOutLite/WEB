@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+
+    font-size: 30px;
+}
+.main-content{
+    width: 900px;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    background: bisque;
+
+}
+
+.content{
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.create-code{
+    width: 200px;
+    height: 50px;
+
+    margin-top: 30px;
+    border-radius: 10px;
+    background: orange;
+    
+    cursor: pointer;
+    border: 0;
+}
+
+.working-code{
+    min-width: 120px;
+
+    position: absolute;
+    left: 70px;
+    top: 20px;
+
+    background-color: bisque;
+    font-size: 30px;
+}
+
+.thing-code{
+    min-width: 180px;
+
+    position: absolute;
+    left: 20px;
+    top: 145px;
+
+    background-color: bisque;
+}
